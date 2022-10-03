@@ -72,7 +72,10 @@ Make your favicon and place it in `home/static/favicon.ico`.
 The python module `github_settings-dist.py` make social login work. You need to insert your own client ID and secret you get from 
 github, and also you can register your app with github (on your localhost, for example).
 
-A search feature is added to ad_list page, in addition to favorite star icons. These are integrated features in the front-end that either query(in the case of search) or save data (in the case of favourites) in the back-end.
+A search feature is added to ad_list page, in addition to favorite star icons. These are integrated features in the front-end that either query(in the case 
+of search) or save data (in the case of favourites) in the back-end. There is also support for tags that are displayed in details page for each ad.
+
+Finally, the simple app called `rest` is a simple REST API app using Django. Its contains very simple model Cat, Breed (many-to-many). Using `serializers.py` and `rest_framework` library of Django, a web application can be turned into REST API. one can send POST, GET requests through a web browsable API or other tools.
 
             
 
