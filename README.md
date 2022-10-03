@@ -46,6 +46,18 @@ Go to the root directory of your project:
             python3 manage.py startapp ads
 Then add this app to `MyDjSite/MyDjSite/settings.py` and `MyDjSite/MyDjSite/urls.py`. The tables and their schema in the data base is defined 
 in `ads/model.py`. 
+Different users own each row in a data model and we only allow a user to edit/modify the rows that belong to them. Any user can see all rows but can only edit their owns. To do this, we create a new module `owner.py` in which we overwrite some generic view methods (ListView, UpdateView, CreateView etc.) in django.
+
+Django has an admin feature that helps building users table for login/logout feature. One can create supersuer acccount to login to /admin page and control other users (create new users, delete them or give them permissions of various types, associate them wiht groups etc.) To do this, run
+
+             python3 manage.py createsuperuser 
+
+Login functionality is built into Django and included in your `setting.py` by default (`django.contib.auth`). Also one has to add a path to the `url.py`
+(`path('accounts/', include('django.contrib.auth.urls`) inside the project.
+To allow the control th elook and feel of login page, we must provide a template called `registration/login.html`. This is a global template and will be 
+found by django anywhere. So we can put htis in any of our application template folder. In our case, this is placed in home application.
+
+`crispy_forms` library is used to shape some forms to make them look slightly better, instead of the boring default look. 
 
             
 
