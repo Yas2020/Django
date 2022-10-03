@@ -36,10 +36,7 @@ urlpatterns = [
     # anything below /ads go to urls.py in ads app     
     path('ads/', include('ads.urls')), 
     path('rest/', include('rest.urls')),
-    re_path(r'^site/(?P<path>.*)$', serve,
-        {'document_root': SITE_ROOT, 'show_indexes': True},
-        name='site_path'
-    ),
+    
 ]
 
 # Serve the favicon

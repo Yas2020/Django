@@ -101,7 +101,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'MyDJApp',
         'USER': 'root', #username that has access to the Database and acts as a database administrator
-        'PASSWORD': 'SalamSQL22$', #password of the database. It will be created at the time of MySQL installation.
+        'PASSWORD': 'YourPassword', #password of the database. It will be created at the time of MySQL installation.
         'HOST': 'localhost',
         'PORT': '8000', # listens to the specific port number is 8000
          'OPTIONS': {
